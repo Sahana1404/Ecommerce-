@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EKART 🛒</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <h1>EKART 🛒</h1>
+    <div class="controls">
+      <input id="search-input" type="text" placeholder="Search products...">
+      
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+        <option value="books">Books</option>
+        <option value="machine-learning">Machine Learning</option>
+        <option value="ai">Artificial Intelligence</option>
+        <option value="toys">Toys</option>
+        <option value="home">Home</option>
+      </select>
+
+      <input type="number" id="min-price" placeholder="Min Price">
+      <input type="number" id="max-price" placeholder="Max Price">
+
+      <select id="sort-by">
+        <option value="default">Sort By</option>
+        <option value="price-asc">Price: Low → High</option>
+        <option value="price-desc">Price: High → Low</option>
+        <option value="popularity">Popularity</option>
+      </select>
+
+      <button id="apply-filters">Apply Filters</button>
+
+      <div class="cart" id="view-cart">🛍️ <span id="cart-count">0</span></div>
+    </div>
+  </header>
+
+
+  <!-- ===== Product Grid ===== -->
+  <main id="product-grid"></main>
+
+  <!-- ===== Cart Overlay & Panel ===== -->
+  <div id="cart-overlay" class="cart-overlay"></div>
+  <aside id="cart-panel" class="cart-panel">
+    <h2>Shopping Cart</h2>
+    <button id="close-cart">Close</button>
+    <div id="cart-items"></div>
+    <p>Total (incl. 10% tax): ₹<span id="cart-total">0.00</span></p>
+    <button id="clear-cart">Clear Cart</button>
+    <button id="checkout-cart">Checkout</button>
+  </aside>
+
+  <!-- ===== Toast Notification ===== -->
+  <div id="toast" class="toast"></div>
+
+  <!-- ===== JS ===== -->
+  <script src="script.js"></script>
+<!-- Image Modal -->
+<div id="image-modal" class="image-modal">
+  <span id="close-modal">&times;</span>
+  <img id="modal-img" class="modal-content">
+</div>
+
+</body>
+</html>
